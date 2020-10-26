@@ -9,6 +9,7 @@ function ThrowError(popUp ,errorCode = 0) {
   else{
     console.log(`Error code: ${errorCode}`);
   }
+  return errorCode;
   /*
   Error codes:
   1 - Wrong input
