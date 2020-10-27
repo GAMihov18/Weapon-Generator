@@ -9,8 +9,13 @@ h1{
 }
 .inv{
   background-color: burlywood;
+  display: flex;  
+  flex-wrap: wrap;
 }
 .invslot{
   background-color: #85735d;
   border: 2px solid #595653 ;
+  height: 150px;
+  width: 150px;
+  margin: 2px 2px;
 }
