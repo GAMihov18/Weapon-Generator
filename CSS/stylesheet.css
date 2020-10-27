@@ -1,3 +1,16 @@
 h1{
   align-content: center;
 }
+.show{
+  background-color: gray;
+}
+.command{
+  background-color: darkgray;
+}
+.inv{
+  background-color: burlywood;
+}
+.invslot{
+  background-color: #85735d;
+  border: 2px solid #595653 ;
+}

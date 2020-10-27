@@ -1,5 +1,11 @@
+//Can't load files with JS
 console.log("Link");
 
+const gameBody = document.getElementById('game')
+const itemValues = {
+  itemRarity = ['Common','Uncommon','Rare','Ultra Rare','Legendary'],
+  itemType = [''],
+};
 
 //Functions
 function ThrowError(popUp ,errorCode = 0) {
@@ -23,4 +29,8 @@ function ThrowError(popUp ,errorCode = 0) {
   9 - 
   10 - 
   */
+}
+
+function loadInv(){
+
 }
