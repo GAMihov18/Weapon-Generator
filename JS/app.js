@@ -1,8 +1,9 @@
 //Can't load files with JS
 console.log("Link");
-
+let invSlotMem = 0;
 const gameBody = document.getElementById('game');
 const inventory = document.getElementById('inv');
+const weaponShow = document.getElementById('show');
 const weaponValues = {
   weaponRarity: ['Common', 'Uncommon', 'Rare', 'Ultra Rare', 'Legendary', 'Mythic', 'Special'],
   weaponType: ['Knife', 'Dagger', 'Shortsword', 'Longsword', 'Bastard Sword', 'Bow', 'Polearm', 'Spear', '2-handed Sword', 'Shield', 'Hammer', 'Mace', 'War Axe', 'Battle Axe', 'Rapier'],
@@ -21,14 +22,31 @@ class weapon {
   }
 }
 
-
+loadInv(9);
 
 //Functions
 function loadInv(invSlots){
-  for (let i = 0; i < invSlots; i++) {
-    inventory.innerHTML+=`<div class="invslot"></div>`;
-    console.log(inventory.innerHTML);
+  for (let i = invSlotMem; i < invSlots+invSlotMem; i++) {
+    inventory.innerHTML+=`<button id="invslot${i}" class="invslot" onclick="showInfo()"></button>
+    `;
   }
+  console.log(inventory.innerHTML, invSlots, invSlotMem);
+  invSlotMem = invSlotMem+invSlots;
+  console.log(invSlots, invSlotMem);
+}
+
+function showInfo(){
+  weaponShow.innerHTML=
+  `
+  <div class="show-weapon-info">
+    <img src="" alt="Pic of Weapon" class="show-weapon-info-img">
+    <p class="show-weapon-info-text">Name: </p>
+    <p class="show-weapon-info-text">Weapon Type: </p>
+    <p class="show-weapon-info-text">Damage Type: </p>
+    <p class="show-weapon-info-text">Physical Damage: </p>
+    <p class="show-weapon-info-text">Magical Damage: </p>
+  </div>
+  `;
 }
 
 function ThrowError(popUp ,errorCode = 0) {
@@ -45,7 +63,6 @@ function ThrowError(popUp ,errorCode = 0) {
   3 - 
   4 - 
   5 - 
-  6 - 
   6 - 
   7 - 
   8 - 

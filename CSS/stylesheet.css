@@ -15,7 +15,24 @@ h1{
 .invslot{
   background-color: #85735d;
   border: 2px solid #595653 ;
-  height: 150px;
-  width: 150px;
+  height: 100px;
+  width: 100px;
   margin: 2px 2px;
+}
+.small-title{
+  flex:1 100%;
+}
+.inv-slot-text{
+  text-align: center;
+}
+.show-weapon-info{
+  background-color: #242424;
+  border: 2px solid #363636;  
+}
+.show-weapon-info-text{
+  color: white;  
+}
+.show-weapon-info-img{
+  height: 100px;
+  width: 100px;
 }
