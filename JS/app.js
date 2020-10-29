@@ -38,6 +38,7 @@ function loadInv(invSlots){
 function showInfo(){
   weaponShow.innerHTML=
   `
+  <p class="small-title">Weapon Show</p>
   <div class="show-weapon-info">
     <img src="" alt="Pic of Weapon" class="show-weapon-info-img">
     <p class="show-weapon-info-text">Name: </p>
