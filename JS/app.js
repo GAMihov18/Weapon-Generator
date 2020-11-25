@@ -37,12 +37,12 @@ class weapon {
   }
 }
 
-loadInv(9);
+loadInv(10);
 
 //Functions
 function loadInv(invSlots){
   for (let i = invSlotMem; i < invSlots+invSlotMem; i++) {
-    inventory.innerHTML+=`<button id="invslot${i}" class="invslot" onclick="showInfo()"></button>\n`;
+    inventory.innerHTML+=`<button id="invslot${i}" class="invslot" onclick="showInfo(${i})"></button>\n`;
   }
   console.debug(inventory.innerHTML, invSlots, invSlotMem);
   invSlotMem = invSlotMem+invSlots;
@@ -50,47 +50,43 @@ function loadInv(invSlots){
 }
 
 function generateWeapon(debug, n=1){
-  let string = '';
+  let string = 'ID:Name:Damage:Rarity:Weapon Type:Leading Damage:Physical Damage:Magical Damage\n';
   for (let i = 0; i < n; i++) {
-    weaponsGenerated.push(new weapon(weaponValues.weaponType[getRandNum(0,14)],weaponValues.weaponRarity[getRandNum(0,6)],getRandNum(0,11),weaponValues.weaponPhysicalDamageType[getRandNum(0,2)],weaponValues.weaponMagicalDamageType[getRandNum(0,5)]));
+    weaponsGenerated.push(new weapon(weaponValues.weaponType[getRandNum(0,15)],weaponValues.weaponRarity[getRandNum(0,7)],getRandNum(0,12),weaponValues.weaponPhysicalDamageType[getRandNum(0,3)],weaponValues.weaponMagicalDamageType[getRandNum(0,6)]));
   }
   if (debug)
   {
     for (let i = 0; i < n; i++) {
       string += 
-`${i}
-Name: ${weaponsGenerated[i].name}
-Damage: ${weaponsGenerated[i].damageValue}
-Rarity: ${weaponsGenerated[i].rarity}
-Weapon Type: ${weaponsGenerated[i].type}
-Leading Damage: ${weaponsGenerated[i].damageType}
-Physical Damage Type: ${weaponsGenerated[i].physicalDamageType}
-Magical Damage Type: ${weaponsGenerated[i].magicalDamageType}\n\n`;
+`${i}:${weaponsGenerated[i].name}:${weaponsGenerated[i].damageValue}:${weaponsGenerated[i].rarity}:${weaponsGenerated[i].type}:${weaponsGenerated[i].damageType}:${weaponsGenerated[i].physicalDamageType}:${weaponsGenerated[i].magicalDamageType}\n`;
     }
     console.debug(string);  
   }
 }
 
-function showInfo(){
+function showInfo(i){
+  if (weaponsGenerated[i].name==undefined) {
+    throwError(0,2);
+  }
+  else{
   weaponShow.innerHTML=
-  `
-  <p class="small-title">Weapon Show</p>
-  <div class="show-weapon-info">
-    <img src="" alt="Pic of Weapon" class="show-weapon-info-img">
-    <p class="show-weapon-info-text">Name: </p>
-    <p class="show-weapon-info-text">Weapon Type: </p>
-    <p class="show-weapon-info-text">Damage Type: </p>
-    <p class="show-weapon-info-text">Physical Damage: </p>
-    <p class="show-weapon-info-text">Magical Damage: </p>
-  </div>
-  `;
+`<p class="small-title">Weapon Show</p>
+<div class="show-weapon-info">
+  <img src="" alt="Pic of Weapon" class="show-weapon-info-img">
+  <p class="show-weapon-info-text">Name: ${weaponsGenerated[i].name}</p>
+  <p class="show-weapon-info-text">Weapon Type: ${weaponsGenerated[i].type}</p>
+  <p class="show-weapon-info-text">Damage Type: ${weaponsGenerated[i].damageType}</p>
+  <p class="show-weapon-info-text">Physical Damage: ${weaponsGenerated[i].physicalDamageType}</p>
+  <p class="show-weapon-info-text">Magical Damage: ${weaponsGenerated[i].magicalDamageType}</p>
+</div>\n`;
+  }
 }
 
 function getRandNum(min, max) {
   return parseInt(Math.random() * (max - min) + min); 
 }
 
-function ThrowError(popUp ,errorCode = 0) {
+function throwError(popUp ,errorCode = 0) {
   if (popUp) {
     alert(`Error code: ${errorCode}`);  
   }
