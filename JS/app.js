@@ -49,11 +49,26 @@ function loadInv(invSlots){
   console.debug(invSlots, invSlotMem);
 }
 
-function generateWeapon(n=1){
+function generateWeapon(debug, n=1){
+  let string = '';
   for (let i = 0; i < n; i++) {
     weaponsGenerated.push(new weapon(weaponValues.weaponType[getRandNum(0,14)],weaponValues.weaponRarity[getRandNum(0,6)],getRandNum(0,11),weaponValues.weaponPhysicalDamageType[getRandNum(0,2)],weaponValues.weaponMagicalDamageType[getRandNum(0,5)]));
   }
-  console.debug(weaponsGenerated);
+  if (debug)
+  {
+    for (let i = 0; i < n; i++) {
+      string += 
+`${i}
+Name: ${weaponsGenerated[i].name}
+Damage: ${weaponsGenerated[i].damageValue}
+Rarity: ${weaponsGenerated[i].rarity}
+Weapon Type: ${weaponsGenerated[i].type}
+Leading Damage: ${weaponsGenerated[i].damageType}
+Physical Damage Type: ${weaponsGenerated[i].physicalDamageType}
+Magical Damage Type: ${weaponsGenerated[i].magicalDamageType}\n\n`;
+    }
+    console.debug(string);  
+  }
 }
 
 function showInfo(){
