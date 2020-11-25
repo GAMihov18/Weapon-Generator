@@ -1,0 +1,1977 @@
+First batch:
+
+0: {…}
+
+damageType: 0​​
+
+damageValue: 579​​
+
+magicalDamageType: "Void"​​
+
+name: "Ultra Rare Bow of Piercing"
+
+physicalDamageType: "Piercing"
+​​
+rarity: "Ultra Rare"
+​​
+type: "Bow"
+​​
+ 
+​
+1: {…}
+​​
+damageType: 0
+​​
+damageValue: 31
+​​
+magicalDamageType: "Void"
+​​
+name: "Uncommon Spear of Slashing"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Uncommon"
+​​
+type: "Spear"
+​​
+ 
+​
+2: {…}
+​​
+damageType: 3
+​​
+damageValue: 636
+​​
+magicalDamageType: "Air"
+​​
+name: "Mythic Dagger of Piercing"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Mythic"
+​​
+type: "Dagger"
+​​
+ 
+​
+3: {…}
+​​
+damageType: 10
+​​
+damageValue: 684
+​​
+magicalDamageType: "Air"
+​​
+name: "Rare Mace of Air"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Rare"
+​​
+type: "Mace"
+​​
+ 
+​
+4: {…}
+​​
+damageType: 10
+​​
+damageValue: 680
+​​
+magicalDamageType: "Water"
+​​
+name: "Uncommon Longsword of Water"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Uncommon"
+​​
+type: "Longsword"
+​​
+ 
+​
+5: {…}
+​​
+damageType: 1
+​​
+damageValue: 637
+​​
+magicalDamageType: "Fire"
+​​
+name: "Legendary 2-handed Sword of Slashing"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Legendary"
+​​
+type: "2-handed Sword"
+​​
+ 
+​
+6: {…}
+​​
+damageType: 0
+​​
+damageValue: 247
+​​
+magicalDamageType: "Void"
+​​
+name: "Legendary Longsword of Piercing"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Legendary"
+​​
+type: "Longsword"
+​​
+ 
+​
+7: {…}
+​​
+damageType: 2
+​​
+damageValue: 300
+​​
+magicalDamageType: "Fire"
+​​
+name: "Mythic War Axe of Piercing"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Mythic"
+​​
+type: "War Axe"
+​​
+ 
+​
+8: {…}
+​​
+damageType: 2
+​​
+damageValue: 377
+​​
+magicalDamageType: "Earth"
+​​
+name: "Ultra Rare Knife of Piercing"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Ultra Rare"
+​​
+type: "Knife"
+​​
+ 
+​
+9: {…}
+​​
+damageType: 4
+​​
+damageValue: 990
+​​
+magicalDamageType: "Air"
+​​
+name: "Rare Shortsword of Slashing"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Rare"
+​​
+type: "Shortsword"
+---------------------------------------------------
+Second batch:
+
+0: {…}
+​​
+damageType: 2
+​​
+damageValue: 957
+​​
+magicalDamageType: "Earth"
+​​
+name: "Legendary Dagger of Piercing"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Legendary"
+​​
+type: "Dagger"
+​​
+ 
+​
+1: {…}
+​​
+damageType: 2
+​​
+damageValue: 379
+​​
+magicalDamageType: "Void"
+​​
+name: "Uncommon War Axe of Piercing"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Uncommon"
+​​
+type: "War Axe"
+​​
+ 
+​
+2: {…}
+​​
+damageType: 3
+​​
+damageValue: 782
+​​
+magicalDamageType: "Water"
+​​
+name: "Mythic Shortsword of Slashing"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Mythic"
+​​
+type: "Shortsword"
+​​
+ 
+​
+3: {…}
+​​
+damageType: 6
+​​
+damageValue: 344
+​​
+magicalDamageType: "Fire"
+​​
+name: "Rare Hammer of Fire"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Rare"
+​​
+type: "Hammer"
+​​
+ 
+​
+4: {…}
+​​
+damageType: 3
+​​
+damageValue: 391
+​​
+magicalDamageType: "Fire"
+​​
+name: "Common Bastard Sword of Slashing"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Common"
+​​
+type: "Bastard Sword"
+​​
+ 
+​
+5: {…}
+​​
+damageType: 2
+​​
+damageValue: 996
+​​
+magicalDamageType: "Earth"
+​​
+name: "Uncommon Shield of Slashing"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Uncommon"
+​​
+type: "Shield"
+​​
+ 
+​
+6: {…}
+​​
+damageType: 8
+​​
+damageValue: 356
+​​
+magicalDamageType: "Air"
+​​
+name: "Mythic Dagger of Air"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Mythic"
+​​
+type: "Dagger"
+​​
+ 
+​
+7: {…}
+​​
+damageType: 7
+​​
+damageValue: 944
+​​
+magicalDamageType: "Fire"
+​​
+name: "Mythic Spear of Fire"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Mythic"
+​​
+type: "Spear"
+​​
+ 
+​
+8: {…}
+​​
+damageType: 3
+​​
+damageValue: 466
+​​
+magicalDamageType: "Water"
+​​
+name: "Legendary Bastard Sword of Slashing"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Legendary"
+​​
+type: "Bastard Sword"
+​​
+ 
+​
+9: {…}
+​​
+damageType: 0
+​​
+damageValue: 868
+​​
+magicalDamageType: "Air"
+​​
+name: "Common Dagger of Piercing"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Common"
+​​
+type: "Dagger"
+​​
+ 
+​
+10: {…}
+​​
+damageType: 4
+​​
+damageValue: 3
+​​
+magicalDamageType: "Air"
+​​
+name: "Rare Shield of Piercing"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Rare"
+​​
+type: "Shield"
+​​
+ 
+​
+11: {…}
+​​
+damageType: 2
+​​
+damageValue: 220
+​​
+magicalDamageType: "Water"
+​​
+name: "Common War Axe of Piercing"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Common"
+​​
+type: "War Axe"
+​​
+ 
+​
+12: {…}
+​​
+damageType: 1
+​​
+damageValue: 487
+​​
+magicalDamageType: "Fire"
+​​
+name: "Mythic Longsword of Piercing"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Mythic"
+​​
+type: "Longsword"
+​​
+ 
+​
+13: {…}
+​​
+damageType: 2
+​​
+damageValue: 800
+​​
+magicalDamageType: "Air"
+​​
+name: "Rare Shield of Slashing"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Rare"
+​​
+type: "Shield"
+​​
+ 
+​
+14: {…}
+​​
+damageType: 8
+​​
+damageValue: 633
+​​
+magicalDamageType: "Fire"
+​​
+name: "Uncommon Battle Axe of Fire"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Uncommon"
+​​
+type: "Battle Axe"
+​​
+ 
+​
+15: {…}
+​​
+damageType: 9
+​​
+damageValue: 379
+​​
+magicalDamageType: "Air"
+​​
+name: "Common 2-handed Sword of Air"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Common"
+​​
+type: "2-handed Sword"
+​​
+ 
+​
+16: {…}
+​​
+damageType: 2
+​​
+damageValue: 626
+​​
+magicalDamageType: "Air"
+​​
+name: "Ultra Rare Shield of Piercing"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Ultra Rare"
+​​
+type: "Shield"
+​​
+ 
+​
+17: {…}
+​​
+damageType: 8
+​​
+damageValue: 984
+​​
+magicalDamageType: "Water"
+​​
+name: "Legendary Hammer of Water"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Legendary"
+​​
+type: "Hammer"
+​​
+ 
+​
+18: {…}
+​​
+damageType: 1
+​​
+damageValue: 943
+​​
+magicalDamageType: "Fire"
+​​
+name: "Legendary Battle Axe of Slashing"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Legendary"
+​​
+type: "Battle Axe"
+​​
+ 
+​
+19: {…}
+​​
+damageType: 3
+​​
+damageValue: 631
+​​
+magicalDamageType: "Air"
+​​
+name: "Ultra Rare Hammer of Slashing"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Ultra Rare"
+​​
+type: "Hammer"
+​​
+ 
+​
+20: {…}
+​​
+damageType: 7
+​​
+damageValue: 94
+​​
+magicalDamageType: "Void"
+​​
+name: "Legendary 2-handed Sword of Void"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Legendary"
+​​
+type: "2-handed Sword"
+​​
+ 
+​
+21: {…}
+​​
+damageType: 2
+​​
+damageValue: 922
+​​
+magicalDamageType: "Water"
+​​
+name: "Legendary War Axe of Slashing"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Legendary"
+​​
+type: "War Axe"
+​​
+ 
+​
+22: {…}
+​​
+damageType: 1
+​​
+damageValue: 558
+​​
+magicalDamageType: "Void"
+​​
+name: "Rare Polearm of Piercing"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Rare"
+​​
+type: "Polearm"
+​​
+ 
+​
+23: {…}
+​​
+damageType: 8
+​​
+damageValue: 893
+​​
+magicalDamageType: "Earth"
+​​
+name: "Common Polearm of Earth"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Common"
+​​
+type: "Polearm"
+​​
+ 
+​
+24: {…}
+​​
+damageType: 5
+​​
+damageValue: 608
+​​
+magicalDamageType: "Void"
+​​
+name: "Legendary Shortsword of Piercing"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Legendary"
+​​
+type: "Shortsword"
+​​
+ 
+​
+25: {…}
+​​
+damageType: 9
+​​
+damageValue: 104
+​​
+magicalDamageType: "Water"
+​​
+name: "Rare Dagger of Water"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Rare"
+​​
+type: "Dagger"
+​​
+ 
+​
+26: {…}
+​​
+damageType: 7
+​​
+damageValue: 689
+​​
+magicalDamageType: "Water"
+​​
+name: "Legendary Battle Axe of Water"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Legendary"
+​​
+type: "Battle Axe"
+​​
+ 
+​
+27: {…}
+​​
+damageType: 3
+​​
+damageValue: 773
+​​
+magicalDamageType: "Earth"
+​​
+name: "Ultra Rare Shield of Piercing"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Ultra Rare"
+​​
+type: "Shield"
+​​
+ 
+​
+28: {…}
+​​
+damageType: 10
+​​
+damageValue: 188
+​​
+magicalDamageType: "Void"
+​​
+name: "Uncommon Longsword of Void"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Uncommon"
+​​
+type: "Longsword"
+​​
+ 
+​
+29: {…}
+​​
+damageType: 5
+​​
+damageValue: 997
+​​
+magicalDamageType: "Fire"
+​​
+name: "Mythic Knife of Slashing"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Mythic"
+​​
+type: "Knife"
+​​
+ 
+​
+30: {…}
+​​
+damageType: 8
+​​
+damageValue: 684
+​​
+magicalDamageType: "Air"
+​​
+name: "Rare Polearm of Air"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Rare"
+​​
+type: "Polearm"
+​​
+ 
+​
+31: {…}
+​​
+damageType: 4
+​​
+damageValue: 297
+​​
+magicalDamageType: "Void"
+​​
+name: "Rare Longsword of Piercing"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Rare"
+​​
+type: "Longsword"
+​​
+ 
+​
+32: {…}
+​​
+damageType: 8
+​​
+damageValue: 40
+​​
+magicalDamageType: "Water"
+​​
+name: "Uncommon Bow of Water"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Uncommon"
+​​
+type: "Bow"
+​​
+ 
+​
+33: {…}
+​​
+damageType: 0
+​​
+damageValue: 844
+​​
+magicalDamageType: "Earth"
+​​
+name: "Legendary Bastard Sword of Piercing"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Legendary"
+​​
+type: "Bastard Sword"
+​​
+ 
+​
+34: {…}
+​​
+damageType: 0
+​​
+damageValue: 510
+​​
+magicalDamageType: "Earth"
+​​
+name: "Legendary Bastard Sword of Slashing"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Legendary"
+​​
+type: "Bastard Sword"
+​​
+ 
+​
+35: {…}
+​​
+damageType: 4
+​​
+damageValue: 843
+​​
+magicalDamageType: "Fire"
+​​
+name: "Common Bow of Slashing"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Common"
+​​
+type: "Bow"
+​​
+ 
+​
+36: {…}
+​​
+damageType: 6
+​​
+damageValue: 250
+​​
+magicalDamageType: "Air"
+​​
+name: "Mythic Battle Axe of Air"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Mythic"
+​​
+type: "Battle Axe"
+​​
+ 
+​
+37: {…}
+​​
+damageType: 1
+​​
+damageValue: 249
+​​
+magicalDamageType: "Water"
+​​
+name: "Mythic Bow of Piercing"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Mythic"
+​​
+type: "Bow"
+​​
+ 
+​
+38: {…}
+​​
+damageType: 9
+​​
+damageValue: 206
+​​
+magicalDamageType: "Void"
+​​
+name: "Ultra Rare Polearm of Void"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Ultra Rare"
+​​
+type: "Polearm"
+​​
+ 
+​
+39: {…}
+​​
+damageType: 6
+​​
+damageValue: 178
+​​
+magicalDamageType: "Air"
+​​
+name: "Ultra Rare Shield of Air"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Ultra Rare"
+​​
+type: "Shield"
+​​
+ 
+​
+40: {…}
+​​
+damageType: 6
+​​
+damageValue: 147
+​​
+magicalDamageType: "Fire"
+​​
+name: "Rare Shortsword of Fire"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Rare"
+​​
+type: "Shortsword"
+​​
+ 
+​
+41: {…}
+​​
+damageType: 8
+​​
+damageValue: 74
+​​
+magicalDamageType: "Void"
+​​
+name: "Ultra Rare Bow of Void"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Ultra Rare"
+​​
+type: "Bow"
+​​
+ 
+​
+42: {…}
+​​
+damageType: 0
+​​
+damageValue: 641
+​​
+magicalDamageType: "Void"
+​​
+name: "Ultra Rare Shortsword of Slashing"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Ultra Rare"
+​​
+type: "Shortsword"
+​​
+ 
+​
+43: {…}
+​​
+damageType: 2
+​​
+damageValue: 609
+​​
+magicalDamageType: "Void"
+​​
+name: "Rare Bow of Piercing"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Rare"
+​​
+type: "Bow"
+​​
+ 
+​
+44: {…}
+​​
+damageType: 9
+​​
+damageValue: 865
+​​
+magicalDamageType: "Void"
+​​
+name: "Legendary Bastard Sword of Void"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Legendary"
+​​
+type: "Bastard Sword"
+​​
+ 
+​
+45: {…}
+​​
+damageType: 7
+​​
+damageValue: 98
+​​
+magicalDamageType: "Earth"
+​​
+name: "Uncommon 2-handed Sword of Earth"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Uncommon"
+​​
+type: "2-handed Sword"
+​​
+ 
+​
+46: {…}
+​​
+damageType: 6
+​​
+damageValue: 915
+​​
+magicalDamageType: "Water"
+​​
+name: "Uncommon Mace of Water"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Uncommon"
+​​
+type: "Mace"
+​​
+ 
+​
+47: {…}
+​​
+damageType: 6
+​​
+damageValue: 304
+​​
+magicalDamageType: "Fire"
+​​
+name: "Uncommon Polearm of Fire"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Uncommon"
+​​
+type: "Polearm"
+​​
+ 
+​
+48: {…}
+​​
+damageType: 2
+​​
+damageValue: 928
+​​
+magicalDamageType: "Water"
+​​
+name: "Ultra Rare Mace of Slashing"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Ultra Rare"
+​​
+type: "Mace"
+​​
+ 
+​
+49: {…}
+​​
+damageType: 9
+​​
+damageValue: 709
+​​
+magicalDamageType: "Water"
+​​
+name: "Legendary Bastard Sword of Water"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Legendary"
+​​
+type: "Bastard Sword"
+​​
+ 
+​
+50: {…}
+​​
+damageType: 4
+​​
+damageValue: 249
+​​
+magicalDamageType: "Void"
+​​
+name: "Ultra Rare Battle Axe of Slashing"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Ultra Rare"
+​​
+type: "Battle Axe"
+​​
+ 
+​
+51: {…}
+​​
+damageType: 8
+​​
+damageValue: 675
+​​
+magicalDamageType: "Void"
+​​
+name: "Common Shield of Void"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Common"
+​​
+type: "Shield"
+​​
+ 
+​
+52: {…}
+​​
+damageType: 8
+​​
+damageValue: 108
+​​
+magicalDamageType: "Air"
+​​
+name: "Rare Battle Axe of Air"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Rare"
+​​
+type: "Battle Axe"
+​​
+ 
+​
+53: {…}
+​​
+damageType: 9
+​​
+damageValue: 69
+​​
+magicalDamageType: "Fire"
+​​
+name: "Legendary Shortsword of Fire"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Legendary"
+​​
+type: "Shortsword"
+​​
+ 
+​
+54: {…}
+​​
+damageType: 10
+​​
+damageValue: 793
+​​
+magicalDamageType: "Air"
+​​
+name: "Ultra Rare Bastard Sword of Air"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Ultra Rare"
+​​
+type: "Bastard Sword"
+​​
+ 
+​
+55: {…}
+​​
+damageType: 0
+​​
+damageValue: 909
+​​
+magicalDamageType: "Void"
+​​
+name: "Uncommon Polearm of Piercing"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Uncommon"
+​​
+type: "Polearm"
+​​
+ 
+​
+56: {…}
+​​
+damageType: 8
+​​
+damageValue: 660
+​​
+magicalDamageType: "Void"
+​​
+name: "Ultra Rare 2-handed Sword of Void"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Ultra Rare"
+​​
+type: "2-handed Sword"
+​​
+ 
+​
+57: {…}
+​​
+damageType: 10
+​​
+damageValue: 819
+​​
+magicalDamageType: "Earth"
+​​
+name: "Mythic Bastard Sword of Earth"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Mythic"
+​​
+type: "Bastard Sword"
+​​
+ 
+​
+58: {…}
+​​
+damageType: 9
+​​
+damageValue: 514
+​​
+magicalDamageType: "Water"
+​​
+name: "Mythic 2-handed Sword of Water"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Mythic"
+​​
+type: "2-handed Sword"
+​​
+ 
+​
+59: {…}
+​​
+damageType: 1
+​​
+damageValue: 436
+​​
+magicalDamageType: "Water"
+​​
+name: "Ultra Rare Longsword of Piercing"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Ultra Rare"
+​​
+type: "Longsword"
+​​
+ 
+​
+60: {…}
+​​
+damageType: 6
+​​
+damageValue: 689
+​​
+magicalDamageType: "Air"
+​​
+name: "Ultra Rare Knife of Air"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Ultra Rare"
+​​
+type: "Knife"
+​​
+ 
+​
+61: {…}
+​​
+damageType: 9
+​​
+damageValue: 290
+​​
+magicalDamageType: "Air"
+​​
+name: "Mythic Spear of Air"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Mythic"
+​​
+type: "Spear"
+​​
+ 
+​
+62: {…}
+​​
+damageType: 10
+​​
+damageValue: 356
+​​
+magicalDamageType: "Air"
+​​
+name: "Common 2-handed Sword of Air"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Common"
+​​
+type: "2-handed Sword"
+​​
+ 
+​
+63: {…}
+​​
+damageType: 4
+​​
+damageValue: 47
+​​
+magicalDamageType: "Air"
+​​
+name: "Common 2-handed Sword of Slashing"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Common"
+​​
+type: "2-handed Sword"
+​​
+ 
+​
+64: {…}
+​​
+damageType: 10
+​​
+damageValue: 237
+​​
+magicalDamageType: "Water"
+​​
+name: "Rare Spear of Water"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Rare"
+​​
+type: "Spear"
+​​
+ 
+​
+65: {…}
+​​
+damageType: 8
+​​
+damageValue: 641
+​​
+magicalDamageType: "Water"
+​​
+name: "Ultra Rare Bastard Sword of Water"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Ultra Rare"
+​​
+type: "Bastard Sword"
+​​
+ 
+​
+66: {…}
+​​
+damageType: 0
+​​
+damageValue: 148
+​​
+magicalDamageType: "Void"
+​​
+name: "Legendary 2-handed Sword of Slashing"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Legendary"
+​​
+type: "2-handed Sword"
+​​
+ 
+​
+67: {…}
+​​
+damageType: 2
+​​
+damageValue: 771
+​​
+magicalDamageType: "Void"
+​​
+name: "Mythic 2-handed Sword of Piercing"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Mythic"
+​​
+type: "2-handed Sword"
+​​
+ 
+​
+68: {…}
+​​
+damageType: 0
+​​
+damageValue: 950
+​​
+magicalDamageType: "Water"
+​​
+name: "Ultra Rare Bow of Slashing"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Ultra Rare"
+​​
+type: "Bow"
+​​
+ 
+​
+69: {…}
+​​
+damageType: 4
+​​
+damageValue: 969
+​​
+magicalDamageType: "Earth"
+​​
+name: "Rare Polearm of Piercing"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Rare"
+​​
+type: "Polearm"
+​​
+ 
+​
+70: {…}
+​​
+damageType: 2
+​​
+damageValue: 648
+​​
+magicalDamageType: "Fire"
+​​
+name: "Ultra Rare Longsword of Piercing"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Ultra Rare"
+​​
+type: "Longsword"
+​​
+ 
+​
+71: {…}
+​​
+damageType: 3
+​​
+damageValue: 178
+​​
+magicalDamageType: "Void"
+​​
+name: "Uncommon Bow of Piercing"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Uncommon"
+​​
+type: "Bow"
+​​
+ 
+​
+72: {…}
+​​
+damageType: 10
+​​
+damageValue: 244
+​​
+magicalDamageType: "Air"
+​​
+name: "Mythic Dagger of Air"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Mythic"
+​​
+type: "Dagger"
+​​
+ 
+​
+73: {…}
+​​
+damageType: 1
+​​
+damageValue: 83
+​​
+magicalDamageType: "Earth"
+​​
+name: "Ultra Rare Longsword of Piercing"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Ultra Rare"
+​​
+type: "Longsword"
+​​
+ 
+​
+74: {…}
+​​
+damageType: 0
+​​
+damageValue: 262
+​​
+magicalDamageType: "Fire"
+​​
+name: "Ultra Rare Spear of Piercing"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Ultra Rare"
+​​
+type: "Spear"
+​​
+ 
+​
+75: {…}
+​​
+damageType: 1
+​​
+damageValue: 853
+​​
+magicalDamageType: "Void"
+​​
+name: "Uncommon Bow of Slashing"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Uncommon"
+​​
+type: "Bow"
+​​
+ 
+​
+76: {…}
+​​
+damageType: 1
+​​
+damageValue: 217
+​​
+magicalDamageType: "Fire"
+​​
+name: "Rare 2-handed Sword of Piercing"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Rare"
+​​
+type: "2-handed Sword"
+​​
+ 
+​
+77: {…}
+​​
+damageType: 5
+​​
+damageValue: 115
+​​
+magicalDamageType: "Void"
+​​
+name: "Legendary Knife of Slashing"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Legendary"
+​​
+type: "Knife"
+​​
+ 
+​
+78: {…}
+​​
+damageType: 4
+​​
+damageValue: 67
+​​
+magicalDamageType: "Earth"
+​​
+name: "Rare Bow of Piercing"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Rare"
+​​
+type: "Bow"
+​​
+ 
+​
+79: {…}
+​​
+damageType: 1
+​​
+damageValue: 682
+​​
+magicalDamageType: "Air"
+​​
+name: "Mythic Hammer of Slashing"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Mythic"
+​​
+type: "Hammer"
+​​
+ 
+​
+80: {…}
+​​
+damageType: 6
+​​
+damageValue: 757
+​​
+magicalDamageType: "Air"
+​​
+name: "Legendary Spear of Air"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Legendary"
+​​
+type: "Spear"
+​​
+ 
+​
+81: {…}
+​​
+damageType: 5
+​​
+damageValue: 58
+​​
+magicalDamageType: "Fire"
+​​
+name: "Mythic Battle Axe of Piercing"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Mythic"
+​​
+type: "Battle Axe"
+​​
+ 
+​
+82: {…}
+​​
+damageType: 8
+​​
+damageValue: 447
+​​
+magicalDamageType: "Fire"
+​​
+name: "Uncommon Knife of Fire"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Uncommon"
+​​
+type: "Knife"
+​​
+ 
+​
+83: {…}
+​​
+damageType: 1
+​​
+damageValue: 239
+​​
+magicalDamageType: "Earth"
+​​
+name: "Legendary Polearm of Slashing"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Legendary"
+​​
+type: "Polearm"
+​​
+ 
+​
+84: {…}
+​​
+damageType: 1
+​​
+damageValue: 936
+​​
+magicalDamageType: "Air"
+​​
+name: "Mythic 2-handed Sword of Piercing"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Mythic"
+​​
+type: "2-handed Sword"
+​​
+ 
+​
+85: {…}
+​​
+damageType: 0
+​​
+damageValue: 867
+​​
+magicalDamageType: "Fire"
+​​
+name: "Ultra Rare Dagger of Slashing"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Ultra Rare"
+​​
+type: "Dagger"
+​​
+ 
+​
+86: {…}
+​​
+damageType: 2
+​​
+damageValue: 27
+​​
+magicalDamageType: "Fire"
+​​
+name: "Common Hammer of Slashing"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Common"
+​​
+type: "Hammer"
+​​
+ 
+​
+87: {…}
+​​
+damageType: 10
+​​
+damageValue: 466
+​​
+magicalDamageType: "Air"
+​​
+name: "Common Longsword of Air"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Common"
+​​
+type: "Longsword"
+​​
+ 
+​
+88: {…}
+​​
+damageType: 8
+​​
+damageValue: 22
+​​
+magicalDamageType: "Earth"
+​​
+name: "Ultra Rare Battle Axe of Earth"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Ultra Rare"
+​​
+type: "Battle Axe"
+​​
+ 
+​
+89: {…}
+​​
+damageType: 4
+​​
+damageValue: 618
+​​
+magicalDamageType: "Void"
+​​
+name: "Common Longsword of Piercing"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Common"
+​​
+type: "Longsword"
+​​
+ 
+​
+90: {…}
+​​
+damageType: 10
+​​
+damageValue: 483
+​​
+magicalDamageType: "Fire"
+​​
+name: "Common Battle Axe of Fire"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Common"
+​​
+type: "Battle Axe"
+​​
+ 
+​
+91: {…}
+​​
+damageType: 7
+​​
+damageValue: 139
+​​
+magicalDamageType: "Fire"
+​​
+name: "Rare Spear of Fire"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Rare"
+​​
+type: "Spear"
+​​
+ 
+​
+92: {…}
+​​
+damageType: 5
+​​
+damageValue: 556
+​​
+magicalDamageType: "Earth"
+​​
+name: "Rare Longsword of Slashing"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Rare"
+​​
+type: "Longsword"
+​​
+ 
+​
+93: {…}
+​​
+damageType: 10
+​​
+damageValue: 846
+​​
+magicalDamageType: "Water"
+​​
+name: "Mythic Shortsword of Water"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Mythic"
+​​
+type: "Shortsword"
+​​
+ 
+​
+94: {…}
+​​
+damageType: 1
+​​
+damageValue: 55
+​​
+magicalDamageType: "Air"
+​​
+name: "Mythic Mace of Slashing"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Mythic"
+​​
+type: "Mace"
+​​
+ 
+​
+95: {…}
+​​
+damageType: 10
+​​
+damageValue: 169
+​​
+magicalDamageType: "Water"
+​​
+name: "Uncommon Bastard Sword of Water"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Uncommon"
+​​
+type: "Bastard Sword"
+​​
+ 
+​
+96: {…}
+​​
+damageType: 2
+​​
+damageValue: 359
+​​
+magicalDamageType: "Void"
+​​
+name: "Legendary Bastard Sword of Piercing"
+​​
+physicalDamageType: "Piercing"
+​​
+rarity: "Legendary"
+​​
+type: "Bastard Sword"
+​​
+ 
+​
+97: {…}
+​​
+damageType: 8
+​​
+damageValue: 494
+​​
+magicalDamageType: "Void"
+​​
+name: "Rare Bow of Void"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Rare"
+​​
+type: "Bow"
+​​
+ 
+​
+98: {…}
+​​
+damageType: 5
+​​
+damageValue: 903
+​​
+magicalDamageType: "Void"
+​​
+name: "Common War Axe of Slashing"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Common"
+​​
+type: "War Axe"
+​
+99: {…}
+​​
+damageType: 10
+​​
+damageValue: 229
+​​
+magicalDamageType: "Fire"
+​​
+name: "Rare Knife of Fire"
+​​
+physicalDamageType: "Slashing"
+​​
+rarity: "Rare"
+​​
+type: "Knife"
