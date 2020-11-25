@@ -1,5 +1,10 @@
+console.info(
+`Made by RoyalFang
+astralissarnaci@gmail.com`
+)
+
 //Can't load files with JS
-console.log("Link");
+console.debug("Link");
 let invSlotMem = 0;
 const gameBody = document.getElementById('game');
 const inventory = document.getElementById('inv');
@@ -10,15 +15,25 @@ const weaponValues = {
   weaponPhysicalDamageType: ['Slashing','Piercing', 'Blunt'],
   weaponMagicalDamageType: ['Fire', 'Water', 'Earth', 'Air', 'Void', 'Lux']
 };
-
+let weaponsGenerated = [];
 //Weapon class constructor
 class weapon {
-  constructor(name,type,damageType,physicalDamageType, magicalDamageType){
-    this.name = name;
+  constructor(type,rarity,damageType,physicalDamageType, magicalDamageType){
     this.type = type;
+    this.rarity = rarity;
     this.damageType = damageType;
+    if (damageType<=5) {
+      damageType = physicalDamageType;
+    }
+    else{
+      damageType = magicalDamageType;
+    }
+    this.name = `${rarity} ${type} of ${damageType}`;
     this.physicalDamageType = physicalDamageType;
-    this.magicalDamageType = magicalDamageType; 
+    this.magicalDamageType = magicalDamageType;
+    this.damageValue = getRandNum(1,1000);
+    //damage type <=5 is physical damage
+    //damage type >=6 is magical damage
   }
 }
 
@@ -27,12 +42,18 @@ loadInv(9);
 //Functions
 function loadInv(invSlots){
   for (let i = invSlotMem; i < invSlots+invSlotMem; i++) {
-    inventory.innerHTML+=`<button id="invslot${i}" class="invslot" onclick="showInfo()"></button>
-    `;
+    inventory.innerHTML+=`<button id="invslot${i}" class="invslot" onclick="showInfo()"></button>\n`;
   }
-  console.log(inventory.innerHTML, invSlots, invSlotMem);
+  console.debug(inventory.innerHTML, invSlots, invSlotMem);
   invSlotMem = invSlotMem+invSlots;
-  console.log(invSlots, invSlotMem);
+  console.debug(invSlots, invSlotMem);
+}
+
+function generateWeapon(n=1){
+  for (let i = 0; i < n; i++) {
+    weaponsGenerated.push(new weapon(weaponValues.weaponType[getRandNum(0,14)],weaponValues.weaponRarity[getRandNum(0,6)],getRandNum(0,11),weaponValues.weaponPhysicalDamageType[getRandNum(0,2)],weaponValues.weaponMagicalDamageType[getRandNum(0,5)]));
+  }
+  console.debug(weaponsGenerated);
 }
 
 function showInfo(){
@@ -50,12 +71,16 @@ function showInfo(){
   `;
 }
 
+function getRandNum(min, max) {
+  return parseInt(Math.random() * (max - min) + min); 
+}
+
 function ThrowError(popUp ,errorCode = 0) {
   if (popUp) {
     alert(`Error code: ${errorCode}`);  
   }
   else{
-    console.log(`Error code: ${errorCode}`);
+    console.error(`Error code: ${errorCode}`);
   }
   /*
   Error codes:
