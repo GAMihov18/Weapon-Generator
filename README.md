@@ -36,7 +36,6 @@ Gets 50% of assembly damage and pierces all physical armor
 Gets 100% of assembly damage and has higher damage against less armored opponents.
 
 - +10% damage against lightly armored opponents
-
 - -25% damage against heavily armored opponents 
 ### Blunt:
 Gets 80% of assembly damage and has higher damage against heavily armored opponents
@@ -91,12 +90,12 @@ Damage bonuses:
 
 - +100% damage against Lux armor
 - +50% damage against Air armor
-- +50% damage against Void armor
 - +50% damage against Earth armor
 - +50% damage against Water armor
+- -50% damage against Void armor
 - -50% damage against Physical armor
 ### Lux:
-Gets 200% of assembly damage as physical damage
+Gets 200% of assembly damage as Lux damage  and heals the user for 20% of damage dealt to magical armor. Lux weapons don't have
 
 Damage bonuses:
 
