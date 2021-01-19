@@ -95,7 +95,7 @@ Damage bonuses:
 - -50% damage against Void armor
 - -50% damage against Physical armor
 ### Lux:
-Gets 200% of assembly damage as Lux damage  and heals the user for 20% of damage dealt to magical armor. Lux weapons don't have
+Gets 200% of assembly damage as Lux damage  and heals the user for 20% of damage dealt to magical armor. Lux weapons don't have physical damage.
 
 Damage bonuses:
 
@@ -105,6 +105,16 @@ Damage bonuses:
 - -50% damage against Lux armor
 - -100% damage against Void armor
 
+---
+##### Work in progress
+## Player entity values
+
+- Health
+- Stamina
+- Mana
+- Proficiency
+  - Damage type proficiency
+  - Health/Stamina/Mana proficiency
 
 ---
 ###### [Twitter](https://twitter.com/TheRoyalFang)

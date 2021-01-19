@@ -15,6 +15,32 @@ const weaponValues = {
   weaponMagicalDamageType: ['Fire', 'Water', 'Earth', 'Air', 'Void', 'Lux']
 };
 let weaponsGenerated = [];
+let playersGenerated = [];
+
+
+//Work in progress. 
+//v1 of class player
+//Class that generates a player with stats and a weapon
+class player{
+  constructor(){
+    this.health = getRandNum(2000,10001);
+    this.stamina = getRandNum(100,501);
+    this.mana = getRandNum(100,501);
+    this.proficiency = [0,0,0,getRandNum(0,2),'']
+    this.weapon = new weapon(weaponValues.weaponType[getRandNum(0,15)],weaponValues.weaponRarity[getRandNum(0,7)],getRandNum(0,12)," ",weaponValues.weaponMagicalDamageType[getRandNum(0,6)]);
+    if (this.proficiency[3]) {
+      this.proficiency[4] = weaponValues.weaponMagicalDamageType[getRandNum(0,6)];
+    }
+    else{
+      this.proficiency[4] = weaponValues.weaponPhysicalDamageType[getRandNum(0,3)];
+    }
+    this.damage = parseFloat(this.weapon.mainMagical)+parseFloat(this.weapon.mainPhysical);
+    if (this.weapon.damageType == this.proficiency[4])
+      this.damage*1.5;
+    this.damage = this.damage.toFixed(2);
+  }
+}
+
 //Weapon class constructor
 class weapon {
   constructor(type,rarity,damageType,physicalDamageType, magicalDamageType,mainMagical=1,mainPhysical=1){
@@ -241,7 +267,24 @@ function generateWeapon(n = 1, debug = 0){
     console.debug(string);  
   }
 }
-
+function generatePlayer(n = 1, debug = 0){
+  for (let i = 0; i < n; i++) {
+    playersGenerated.push(new player);
+  }
+  
+  if (debug)
+  {
+    //Add names of players later, perhaps?
+    let string = 'ID:Health:Stamina:Mana:Health Proficiency:Stamina Proficiency:Mana Proficiency:Damage Type Proficiency:Weapond Damage:Weapon Damage Type:Weapon Crit Rate:Weapon Crit Mult\n';
+    for (let i = 0; i < n; i++) {
+      
+      string +=
+`${i}:${playersGenerated[i].health}:${playersGenerated[i].stamina}:${playersGenerated[i].mana}:${playersGenerated[i].proficiency[0]}:${playersGenerated[i].proficiency[1]}:${playersGenerated[i].proficiency[2]}:${playersGenerated[i].proficiency[4]}:${playersGenerated[i].damage}:${playersGenerated[i].weapon.critRate}:${playersGenerated[i].weapon.critMult}:${playersGenerated[i].weapon.damageType}\n`;
+    }
+    console.debug(string);  
+    string = '';
+  }
+}
 function showInfo(i){
   if (weaponsGenerated[i]==undefined) {
     throwError(0,2);
@@ -262,7 +305,7 @@ function showInfo(i){
 </div>`;
   }
 }
-
+//0=integer, 1=float
 function getRandNum(min, max, what) {
   if (what==2) {
     return 1;
