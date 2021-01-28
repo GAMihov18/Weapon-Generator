@@ -16,6 +16,7 @@ const weaponValues = {
 };
 let weaponsGenerated = [];
 let playersGenerated = [];
+let armorsGenerated = [];
 
 
 //Work in progress. 
@@ -26,7 +27,11 @@ class player{
     this.health = getRandNum(2000,10001);
     this.stamina = getRandNum(100,501);
     this.mana = getRandNum(100,501);
-    this.proficiency = [0,0,0,getRandNum(0,2),'']
+    this.proficiency = [0,0,0,getRandNum(0,2),''];//[0] - Health Proficiency \ [1] - Stamina Proficiency \ [2] - Mana Proficiency \ [3] - Damage Proficiency
+    this.helmet = new armor('Helmet');
+    this.chestplate = new armor('Chestplate');
+    this.leggings = new armor('Leggings');
+    this.boots = new armor('Boots');
     this.weapon = new weapon(weaponValues.weaponType[getRandNum(0,15)],weaponValues.weaponRarity[getRandNum(0,7)],getRandNum(0,12)," ",weaponValues.weaponMagicalDamageType[getRandNum(0,6)]);
     if (this.proficiency[3]) {
       this.proficiency[4] = weaponValues.weaponMagicalDamageType[getRandNum(0,6)];
@@ -38,6 +43,30 @@ class player{
     if (this.weapon.damageType == this.proficiency[4])
       this.damage*1.5;
     this.damage = this.damage.toFixed(2);
+  } 
+}
+
+class armor {
+  constructor(type){
+    this.armor = getRandNum(1,1001);
+    this.armorPiece = type;
+    switch (type) {
+      case 'Helmet':
+        this.armor *= 0.5;
+        break;
+      case 'Chestplate':
+        this.armor *= 1;
+        break;
+      case 'Leggings':
+        this.armor *= 0.7;
+        break;
+      case 'Boots':
+        this.armor *= 0.4;
+        break;
+      default:
+        break;
+    }
+    this.armor = this.armor.toFixed(2);
   }
 }
 
@@ -275,13 +304,13 @@ function generatePlayer(n = 1, debug = 0){
   if (debug)
   {
     //Add names of players later, perhaps?
-    let string = 'ID:Health:Stamina:Mana:Health Proficiency:Stamina Proficiency:Mana Proficiency:Damage Type Proficiency:Weapond Damage:Weapon Damage Type:Weapon Crit Rate:Weapon Crit Mult\n';
+    let string = 'ID:Health:Total Armor:Helmet:Chestplate:Leggings:Boots:Stamina:Mana:Health Proficiency:Stamina Proficiency:Mana Proficiency:Damage Type Proficiency:Weapon Damage:Weapon Crit Rate:Weapon Crit Mult:Weapon Damage Type\n';
     for (let i = 0; i < n; i++) {
-      
+      let a = parseFloat(playersGenerated[i].helmet.armor)+parseFloat(playersGenerated[i].chestplate.armor)+parseFloat(playersGenerated[i].leggings.armor)+parseFloat(playersGenerated[i].boots.armor);
       string +=
-`${i}:${playersGenerated[i].health}:${playersGenerated[i].stamina}:${playersGenerated[i].mana}:${playersGenerated[i].proficiency[0]}:${playersGenerated[i].proficiency[1]}:${playersGenerated[i].proficiency[2]}:${playersGenerated[i].proficiency[4]}:${playersGenerated[i].damage}:${playersGenerated[i].weapon.critRate}:${playersGenerated[i].weapon.critMult}:${playersGenerated[i].weapon.damageType}\n`;
+`${i}:${playersGenerated[i].health}:${a.toFixed(2)}:${playersGenerated[i].helmet.armor}:${playersGenerated[i].chestplate.armor}:${playersGenerated[i].leggings.armor}:${playersGenerated[i].boots.armor}:${playersGenerated[i].stamina}:${playersGenerated[i].mana}:${playersGenerated[i].proficiency[0]}:${playersGenerated[i].proficiency[1]}:${playersGenerated[i].proficiency[2]}:${playersGenerated[i].proficiency[4]}:${playersGenerated[i].damage}:${playersGenerated[i].weapon.critRate}:${playersGenerated[i].weapon.critMult}:${playersGenerated[i].weapon.damageType}\n`;
     }
-    console.debug(string);  
+    console.debug(string);
     string = '';
   }
 }
