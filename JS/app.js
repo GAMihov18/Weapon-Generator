@@ -14,25 +14,44 @@ const weaponValues = {
   weaponPhysicalDamageType: ['Slashing','Piercing', 'Blunt'],
   weaponMagicalDamageType: ['Fire', 'Water', 'Earth', 'Air', 'Void', 'Lux']
 };
+const armorValues = {
+  armorType: ['Helmet', 'Chestplate', 'Leggings', 'Boots'],
+  armorMod: []
+}
 let weaponsGenerated = [];
 let playersGenerated = [];
 let armorsGenerated = [];
 
 
 //Work in progress. 
-//v1 of class player
-//Class that generates a player with stats and a weapon
+//v2 of class player
+//Class that generates a player with stats, a weapon, armor and proficiency modifiers
 class player{
   constructor(){
+    this.helmet = new armor(armorValues.armorType[0]);
+    this.chestplate = new armor(armorValues.armorType[1]);
+    this.leggings = new armor(armorValues.armorType[2]);
+    this.boots = new armor(armorValues.armorType[3]);
+    this.weapon = new weapon(weaponValues.weaponType[getRandNum(0,15)],weaponValues.weaponRarity[getRandNum(0,7)],getRandNum(0,12)," ",weaponValues.weaponMagicalDamageType[getRandNum(0,6)]);
+
+
     this.health = getRandNum(2000,10001);
     this.stamina = getRandNum(100,501);
     this.mana = getRandNum(100,501);
     this.proficiency = [0,0,0,getRandNum(0,2),''];//[0] - Health Proficiency \ [1] - Stamina Proficiency \ [2] - Mana Proficiency \ [3] - Damage Proficiency
-    this.helmet = new armor('Helmet');
-    this.chestplate = new armor('Chestplate');
-    this.leggings = new armor('Leggings');
-    this.boots = new armor('Boots');
-    this.weapon = new weapon(weaponValues.weaponType[getRandNum(0,15)],weaponValues.weaponRarity[getRandNum(0,7)],getRandNum(0,12)," ",weaponValues.weaponMagicalDamageType[getRandNum(0,6)]);
+
+    if (getRandNum(1, 101) > 80){
+      this.proficiency[0] = 1;
+      this.health *= 1.5;
+    }
+    if (getRandNum(1, 101) > 50){ 
+      this.proficiency[1] = 1;
+      this.stamina *= 1.5;
+    }
+    if (getRandNum(1, 101) > 50){ 
+      this.proficiency[2] = 1;
+      this.mana *= 1.5;
+    }
     if (this.proficiency[3]) {
       this.proficiency[4] = weaponValues.weaponMagicalDamageType[getRandNum(0,6)];
     }
@@ -42,10 +61,13 @@ class player{
     this.damage = parseFloat(this.weapon.mainMagical)+parseFloat(this.weapon.mainPhysical);
     if (this.weapon.damageType == this.proficiency[4])
       this.damage*1.5;
+    this.health = this.health.toFixed(2);
+    this.stamina = this.stamina.toFixed(2);
+    this.mana = this.mana.toFixed(2);
     this.damage = this.damage.toFixed(2);
   } 
 }
-
+//v1 of armor class. Will receive modifiers in the future.
 class armor {
   constructor(type){
     this.armor = getRandNum(1,1001);
@@ -275,11 +297,8 @@ function loadInv(invSlots){
   for (let i = invSlotMem; i < invSlots+invSlotMem; i++) {
     inventory.innerHTML+=`<button id="invslot${i}" class="invslot" onclick="showInfo(${i})"></button>\n`;
   }
-  console.debug(inventory.innerHTML, invSlots, invSlotMem);
   invSlotMem = invSlotMem+invSlots;
-  console.debug(invSlots, invSlotMem);
 }
-
 function generateWeapon(n = 1, debug = 0){
   for (let i = 0; i < n; i++) {
     weaponsGenerated.push(new weapon(weaponValues.weaponType[getRandNum(0,15)],weaponValues.weaponRarity[getRandNum(0,7)],getRandNum(0,12)," ",weaponValues.weaponMagicalDamageType[getRandNum(0,6)]));
@@ -339,7 +358,7 @@ function getRandNum(min, max, what) {
   if (what==2) {
     return 1;
   }
-  if (what) {
+  if (!what) {
     return Math.random() * (max - min) + min;
   }
   else{
