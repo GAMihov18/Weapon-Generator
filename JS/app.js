@@ -16,7 +16,10 @@ const weaponValues = {
 };
 const armorValues = {
   armorType: ['Helmet', 'Chestplate', 'Leggings', 'Boots'],
-  armorMod: []
+}
+const modifiers = {
+  good:[],
+  bad:[],
 }
 let weaponsGenerated = [];
 let playersGenerated = [];
@@ -67,7 +70,8 @@ class player{
     this.damage = this.damage.toFixed(2);
   } 
 }
-//v1 of armor class. Will receive modifiers in the future.
+//v1
+//Will receive modifiers in the future.
 class armor {
   constructor(type){
     this.armor = getRandNum(1,1001);
@@ -92,7 +96,8 @@ class armor {
   }
 }
 
-//Weapon class constructor
+//v1
+//Will receive modifiers in the future.
 class weapon {
   constructor(type,rarity,damageType,physicalDamageType, magicalDamageType,mainMagical=1,mainPhysical=1){
     this.type = type;
