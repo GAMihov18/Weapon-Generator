@@ -2,29 +2,34 @@ console.info(
 `Made by RoyalFang
 astralissarnaci@gmail.com`
 );
-
 console.debug("Link");
+
 let invSlotMem = 0;
+
 const gameBody = document.getElementById('game');
 const inventory = document.getElementById('inv');
 const weaponShow = document.getElementById('show');
+//Contains all values for weapons
 const weaponValues = {
   weaponRarity: ['Common', 'Uncommon', 'Rare', 'Ultra Rare', 'Legendary', 'Mythic', 'Special'],
   weaponType: ['Knife', 'Dagger', 'Shortsword', 'Longsword', 'Bastard Sword', 'Bow', 'Polearm', 'Spear', '2-handed Sword', 'Shield', 'Hammer', 'Mace', 'War Axe', 'Battle Axe', 'Rapier'],
   weaponPhysicalDamageType: ['Slashing','Piercing', 'Blunt'],
   weaponMagicalDamageType: ['Fire', 'Water', 'Earth', 'Air', 'Void', 'Lux']
 };
+//Contains all values for armors
 const armorValues = {
   armorType: ['Helmet', 'Chestplate', 'Leggings', 'Boots'],
 }
+//Constains all applicable modifiers
 const modifiers = {
   good:[],
   bad:[],
 }
+
+//Arrays for saving all the generated X
 let weaponsGenerated = [];
 let playersGenerated = [];
 let armorsGenerated = [];
-
 
 //Work in progress. 
 //v2 of class player
@@ -36,7 +41,6 @@ class player{
     this.leggings = new armor(armorValues.armorType[2]);
     this.boots = new armor(armorValues.armorType[3]);
     this.weapon = new weapon(weaponValues.weaponType[getRandNum(0,15)],weaponValues.weaponRarity[getRandNum(0,7)],getRandNum(0,12)," ",weaponValues.weaponMagicalDamageType[getRandNum(0,6)]);
-
 
     this.health = getRandNum(2000,10001);
     this.stamina = getRandNum(100,501);
@@ -359,11 +363,11 @@ function showInfo(i){
   }
 }
 //0=integer, 1=float
-function getRandNum(min, max, what) {
+function getRandNum(min, max, what = 1) {
   if (what==2) {
     return 1;
   }
-  if (!what) {
+  if (what) {
     return Math.random() * (max - min) + min;
   }
   else{
