@@ -74,7 +74,7 @@ class player{
     this.damage = this.damage.toFixed(2);
   } 
 }
-//v1
+//v1 of class armor
 //Will receive modifiers in the future.
 class armor {
   constructor(type){
@@ -99,17 +99,45 @@ class armor {
     this.armor = this.armor.toFixed(2);
   }
 }
-
-//v1
+//v1 of class weapon
 //Will receive modifiers in the future.
 class weapon {
-  constructor(type,rarity,damageType,physicalDamageType, magicalDamageType,mainMagical=1,mainPhysical=1){
-    this.type = type;
-    this.rarity = rarity;
+  constructor(){
     this.assemblyDamage = getRandNum(1,1001);
+    this.mainPhysical = 0;
+    this.mainMagical = 0;
     this.critRate = getRandNum(1,21);
-    this.critMult = getRandNum(1.05, 2.51);
-    switch (type) {
+    this.critMult = getRandNum(1.05,2.51);
+    this.rawDmgType = getRandNum(1,11,0);
+    this.magDmgType = weaponValues.weaponMagicalDamageType[getRandNum(0,6,0)];
+    this.wType = weaponValues.weaponType[getRandNum(0,15,0)];
+    this.physDmgType = this.setPhysDmg();
+    this.dmgType = this.setDmgType();
+    this.rarity = weaponValues.weaponRarity[getRandNum(0,7,0)];
+    this.applyRarityMod();
+    this.applyMainDmgMod();
+    this.setName();
+    this.setPrecision(2);
+  }
+  setPrecision(prec){
+    this.assemblyDamage=this.assemblyDamage.toFixed(prec);
+    this.mainPhysical=this.mainPhysical.toFixed(prec);
+    this.mainMagical=this.mainMagical.toFixed(prec);
+    this.critMult=this.critMult.toFixed(prec);
+    this.critRate=this.critRate.toFixed(prec);
+  }
+  setDmgType(){
+    if (this.rawDmgType < 6) {
+      let dmgType = this.physDmgType;
+      return dmgType;
+    }
+    else{
+      let dmgType = this.magDmgType;
+      return dmgType;
+    }
+  }
+  setPhysDmg(){
+    switch (this.wType) {
       case 'Longsword':
       case 'Knife':
       case 'Bastard Sword':
@@ -118,35 +146,23 @@ class weapon {
       case 'War Axe':
       case 'Battle Axe':
       case 'Shortsword':
-        physicalDamageType = weaponValues.weaponPhysicalDamageType[0]; //Slashing
-        break;
+        return weaponValues.weaponPhysicalDamageType[0]; //Slashing
       case 'Bow':
       case 'Spear':
       case 'Rapier':
       case 'Dagger':
-        physicalDamageType = weaponValues.weaponPhysicalDamageType[1]; //Piercing
-        break;
+        return weaponValues.weaponPhysicalDamageType[1]; //Piercing
       case 'Mace':
       case 'Hammer':
-        physicalDamageType = weaponValues.weaponPhysicalDamageType[2]; //Blunt
-        break;
+        return weaponValues.weaponPhysicalDamageType[2]; //Blunt
       case 'Shield':
-        physicalDamageType = 'Protection';
+        return 'Protection';
       default:
         break;
     }
-    this.physicalDamageType = physicalDamageType;
-    if (damageType<=5) {
-      this.damageType = physicalDamageType;
-    }
-    else{
-      this.damageType = magicalDamageType;
-    }
-    //damage type <=5 is physical damage
-    //damage type >=6 is magical damage
-    this.name = `${rarity} ${type} of ${this.damageType}`;
-    this.magicalDamageType = magicalDamageType;
-    switch (rarity) {
+  }
+  applyRarityMod(){
+    switch (this.rarity) {
       case 'Common':
         this.assemblyDamage *= 0.7;
         this.critRate *= 0.5;
@@ -191,113 +207,115 @@ class weapon {
       default:
         break;
     }
-    switch (this.damageType) {
+  }
+  applyMainDmgMod(){
+    switch (this.dmgType) {
       case 'Slashing':
-        mainPhysical = 1*this.assemblyDamage;// Slashing damage modifier
-        mainMagical = 0.01*this.assemblyDamage;// Non-magic weapon modifier
+        this.mainPhysical = 1*this.assemblyDamage;// Slashing damage modifier
+        this.mainMagical = 0.01*this.assemblyDamage;// Non-magic weapon modifier
         break;
       case 'Piercing':
-        mainPhysical = 0.5*this.assemblyDamage;// Piercing damage modifier
-        mainMagical = 0.01*this.assemblyDamage;// Non-magic weapon modifier
+        this.mainPhysical = 0.5*this.assemblyDamage;// Piercing damage modifier
+        this.mainMagical = 0.01*this.assemblyDamage;// Non-magic weapon modifier
         break;
       case 'Blunt':
-        mainPhysical = 0.8*this.assemblyDamage;// Blunt damage modifier
-        mainMagical = 0.01*this.assemblyDamage;// Non-magic weapon modifier
+        this.mainPhysical = 0.8*this.assemblyDamage;// Blunt damage modifier
+        this.mainMagical = 0.01*this.assemblyDamage;// Non-magic weapon modifier
         break;
       case 'Fire':
-        mainMagical = 0.4*this.assemblyDamage;
-        switch(physicalDamageType){
+        this.mainMagical = 0.4*this.assemblyDamage;
+        switch(this.physDmgType){
         case 'Slashing':
-        mainPhysical = 0.5*this.assemblyDamage;
+          this.mainPhysical = 0.5*this.assemblyDamage;
         break;
         case 'Piercing':
-          mainPhysical = 0.1*this.assemblyDamage;
+          this.mainPhysical = 0.1*this.assemblyDamage;
           break;
         case 'Blunt':
-          mainPhysical = 0.4*this.assemblyDamage;
+          this.mainPhysical = 0.4*this.assemblyDamage;
         break;
         }
         break;
       case 'Water':
-        mainMagical = 0.4*this.assemblyDamage;
-        switch(physicalDamageType){
+        this.mainMagical = 0.4*this.assemblyDamage;
+        switch(this.physDmgType){
           case 'Slashing':
-          mainPhysical = 0.5*this.assemblyDamage;
+            this.mainPhysical = 0.5*this.assemblyDamage;
           break;
           case 'Piercing':
-            mainPhysical = 0.1*this.assemblyDamage;
+            this.mainPhysical = 0.1*this.assemblyDamage;
             break;
           case 'Blunt':
-            mainPhysical = 0.4*this.assemblyDamage;
+            this.mainPhysical = 0.4*this.assemblyDamage;
           break;
           }
         break;
       case 'Air':
-        mainMagical = 0.4*this.assemblyDamage;
-        switch(physicalDamageType){
+        this.mainMagical = 0.4*this.assemblyDamage;
+        switch(this.physDmgType){
           case 'Slashing':
-          mainPhysical = 0.5*this.assemblyDamage;
+            this.mainPhysical = 0.5*this.assemblyDamage;
           break;
           case 'Piercing':
-            mainPhysical = 0.1*this.assemblyDamage;
+            this.mainPhysical = 0.1*this.assemblyDamage;
             break;
           case 'Blunt':
-            mainPhysical = 0.4*this.assemblyDamage;
+            this.mainPhysical = 0.4*this.assemblyDamage;
           break;
           }
         break;
       case 'Earth':
-        mainMagical = 0.4*this.assemblyDamage;
-        switch(physicalDamageType){
+        this.mainMagical = 0.4*this.assemblyDamage;
+        switch(this.physDmgType){
           case 'Slashing':
-          mainPhysical = 0.5*this.assemblyDamage;
+            this.mainPhysical = 0.5*this.assemblyDamage;
           break;
           case 'Piercing':
-            mainPhysical = 0.1*this.assemblyDamage;
+            this.mainPhysical = 0.1*this.assemblyDamage;
             break;
           case 'Blunt':
-            mainPhysical = 0.4*this.assemblyDamage;
+            this.mainPhysical = 0.4*this.assemblyDamage;
           break;
           }
         break;
       case 'Void':
-        mainMagical = 0.4*this.assemblyDamage;
-        switch(physicalDamageType){
+        this.mainMagical = 0.4*this.assemblyDamage;
+        switch(this.physDmgType){
           case 'Slashing':
-          mainPhysical = 0.5*this.assemblyDamage;
+            this.mainPhysical = 0.5*this.assemblyDamage;
           break;
           case 'Piercing':
-            mainPhysical = 0.1*this.assemblyDamage;
-            break;
+            this.mainPhysical = 0.1*this.assemblyDamage;
+          break;
           case 'Blunt':
-            mainPhysical = 0.4*this.assemblyDamage;
+            this.mainPhysical = 0.4*this.assemblyDamage;
           break;
           }
         break;
       case 'Lux':
-        mainMagical = 2*this.assemblyDamage;
-        switch(physicalDamageType){
+        this.mainMagical = 2*this.assemblyDamage;
+        switch(this.physDmgType){
           case 'Slashing':
-          mainPhysical = 0.5*this.assemblyDamage;
+            this.mainPhysical = 0.5*this.assemblyDamage;
           break;
           case 'Piercing':
-            mainPhysical = 0.1*this.assemblyDamage;
+            this.mainPhysical = 0.1*this.assemblyDamage;
             break;
           case 'Blunt':
-            mainPhysical = 0.4*this.assemblyDamage;
+            this.mainPhysical = 0.4*this.assemblyDamage;
           break;
           }
         break;
       default:
         break;
     }
-    this.assemblyDamage = this.assemblyDamage.toFixed(2);
-    this.mainMagical = mainMagical.toFixed(2);
-    this.mainPhysical = mainPhysical.toFixed(2);
-    this.critRate = this.critRate.toFixed(2);
-    this.critMult = this.critMult.toFixed(2);
   }
-  
+  setName(){
+    this.name = `${this.rarity} ${this.wType} of ${this.dmgType}`;
+  }
+  get giveDebugData(){
+    return `${this.name}:${this.assemblyDamage}:${this.physDmgType}:${this.magDmgType}:${this.critRate}:${this.critMult}:${this.rarity}:${this.wType}:${this.dmgType}:${this.mainPhysical}:${this.mainMagical}`;
+  }
 }
 
 loadInv(10);
@@ -311,7 +329,9 @@ function loadInv(invSlots){
 }
 function generateWeapon(n = 1, debug = 0){
   for (let i = 0; i < n; i++) {
-    weaponsGenerated.push(new weapon(weaponValues.weaponType[getRandNum(0,15)],weaponValues.weaponRarity[getRandNum(0,7)],getRandNum(0,12)," ",weaponValues.weaponMagicalDamageType[getRandNum(0,6)]));
+    let w = new weapon();
+
+    weaponsGenerated.push(w);
   }
   
   if (debug)
@@ -319,8 +339,7 @@ function generateWeapon(n = 1, debug = 0){
     let string = 'ID:Name:Assembly Damage:Main Physical DMG:Main Magical DMG:Crit Rate:Crit Mult:Rarity:Weapon Type:Leading Damage:Physical Damage:Magical Damage\n';
     for (let i = 0; i < n; i++) {
       
-      string +=
-`${i}:${weaponsGenerated[i].name}:${weaponsGenerated[i].assemblyDamage}:${weaponsGenerated[i].mainPhysical}:${weaponsGenerated[i].mainMagical}:${weaponsGenerated[i].critRate}:${weaponsGenerated[i].critMult}:${weaponsGenerated[i].rarity}:${weaponsGenerated[i].type}:${weaponsGenerated[i].damageType}:${weaponsGenerated[i].physicalDamageType}:${weaponsGenerated[i].magicalDamageType}\n`;
+      string += `${i}:${weaponsGenerated[i].giveDebugData}\n`;
     }
     console.debug(string);  
   }
@@ -364,7 +383,7 @@ function showInfo(i){
   }
 }
 //0=integer, 1=float
-function getRandNum(min, max, what = 1) {
+function getRandNum(min=0, max=0, what = 1) {
   if (what==2) {
     return 1;
   }
