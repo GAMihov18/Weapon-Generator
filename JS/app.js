@@ -20,7 +20,7 @@ const weaponValues = {
 const armorValues = {
   armorType: ['Helmet', 'Chestplate', 'Leggings', 'Boots'],
 }
-//Constains all applicable modifiers
+//Contains all applicable modifiers
 const modifiers = {
   good:[],
   bad:[],
@@ -297,6 +297,7 @@ class weapon {
     this.critRate = this.critRate.toFixed(2);
     this.critMult = this.critMult.toFixed(2);
   }
+  
 }
 
 loadInv(10);
