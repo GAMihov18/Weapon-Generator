@@ -40,7 +40,7 @@ class player{
     this.chestplate = new armor(armorValues.armorType[1]);
     this.leggings = new armor(armorValues.armorType[2]);
     this.boots = new armor(armorValues.armorType[3]);
-    this.weapon = new weapon(weaponValues.weaponType[getRandNum(0,15)],weaponValues.weaponRarity[getRandNum(0,7)],getRandNum(0,12)," ",weaponValues.weaponMagicalDamageType[getRandNum(0,6)]);
+    this.weapon = new Weapon(weaponValues.weaponType[getRandNum(0,15)],weaponValues.weaponRarity[getRandNum(0,7)],getRandNum(0,12)," ",weaponValues.weaponMagicalDamageType[getRandNum(0,6)]);
 
     this.health = getRandNum(2000,10001);
     this.stamina = getRandNum(100,501);
@@ -101,8 +101,9 @@ class armor {
 }
 //v1 of class weapon
 //Will receive modifiers in the future.
-class weapon {
+class Weapon {
   constructor(){
+    let startTest = Date.now();
     this.assemblyDamage = getRandNum(1,1001);
     this.mainPhysical = 0;
     this.mainMagical = 0;
@@ -118,25 +119,37 @@ class weapon {
     this.applyMainDmgMod();
     this.setName();
     this.setPrecision(2);
+    let endTest = Date.now();
+    console.log(`Time for constructor: ${endTest - startTest}`);
   }
   setPrecision(prec){
+    let startTest = Date.now();
     this.assemblyDamage=this.assemblyDamage.toFixed(prec);
     this.mainPhysical=this.mainPhysical.toFixed(prec);
     this.mainMagical=this.mainMagical.toFixed(prec);
     this.critMult=this.critMult.toFixed(prec);
     this.critRate=this.critRate.toFixed(prec);
+    let endTest = Date.now();
+    console.log(`Time for setPrecision: ${endTest - startTest}`);
   }
   setDmgType(){
+    let startTest = Date.now();
     if (this.rawDmgType < 6) {
       let dmgType = this.physDmgType;
+      let endTest = Date.now();
+      console.log(`Time for setDmgType: ${endTest - startTest}`);
       return dmgType;
     }
     else{
       let dmgType = this.magDmgType;
+      let endTest = Date.now();
+      console.log(`Time for setDmgType: ${endTest - startTest}`);
       return dmgType;
     }
+    
   }
   setPhysDmg(){
+    let startTest = Date.now();
     switch (this.wType) {
       case 'Longsword':
       case 'Knife':
@@ -160,8 +173,11 @@ class weapon {
       default:
         break;
     }
+    let endTest = Date.now();
+    console.log(`Time for setPhysDmg: ${endTest - startTest}`);
   }
   applyRarityMod(){
+    let startTest = Date.now();
     switch (this.rarity) {
       case 'Common':
         this.assemblyDamage *= 0.7;
@@ -207,8 +223,11 @@ class weapon {
       default:
         break;
     }
+    let endTest = Date.now();
+    console.log(`Time for applyRarityMod: ${endTest - startTest}`);
   }
   applyMainDmgMod(){
+    let startTest = Date.now();
     switch (this.dmgType) {
       case 'Slashing':
         this.mainPhysical = 1*this.assemblyDamage;// Slashing damage modifier
@@ -309,9 +328,14 @@ class weapon {
       default:
         break;
     }
+    let endTest = Date.now();
+    console.log(`Time for applyMainDmgMod: ${endTest - startTest}`);
   }
   setName(){
+    let startTest = Date.now();
     this.name = `${this.rarity} ${this.wType} of ${this.dmgType}`;
+    let endTest = Date.now();
+    console.log(`Time for setName: ${endTest - startTest}`);
   }
   get giveDebugData(){
     return `${this.name}:${this.assemblyDamage}:${this.physDmgType}:${this.magDmgType}:${this.critRate}:${this.critMult}:${this.rarity}:${this.wType}:${this.dmgType}:${this.mainPhysical}:${this.mainMagical}`;
@@ -329,9 +353,7 @@ function loadInv(invSlots){
 }
 function generateWeapon(n = 1, debug = 0){
   for (let i = 0; i < n; i++) {
-    let w = new weapon();
-
-    weaponsGenerated.push(w);
+    weaponsGenerated.push(new Weapon());
   }
   
   if (debug)
