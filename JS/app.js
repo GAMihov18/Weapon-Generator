@@ -18,7 +18,11 @@ const weaponValues = {
 };
 //Contains all values for armors
 const armorValues = {
-  armorType: ['Helmet', 'Chestplate', 'Leggings', 'Boots'],
+  armorType: {
+    helmet: ['Helmet'], 
+    chestplate: ['Chestplate'], 
+    leggings: ['Leggings'], 
+    boots:['Boots']},
 }
 //Contains all applicable modifiers
 const modifiers = {
@@ -99,11 +103,10 @@ class armor {
     this.armor = this.armor.toFixed(2);
   }
 }
-//v1 of class weapon
+//v2 of class weapon
 //Will receive modifiers in the future.
 class Weapon {
   constructor(){
-    let startTest = Date.now();
     this.assemblyDamage = getRandNum(1,1001);
     this.mainPhysical = 0;
     this.mainMagical = 0;
@@ -119,37 +122,27 @@ class Weapon {
     this.applyMainDmgMod();
     this.setName();
     this.setPrecision(2);
-    let endTest = Date.now();
-    console.log(`Time for constructor: ${endTest - startTest}`);
   }
   setPrecision(prec){
-    let startTest = Date.now();
     this.assemblyDamage=this.assemblyDamage.toFixed(prec);
     this.mainPhysical=this.mainPhysical.toFixed(prec);
     this.mainMagical=this.mainMagical.toFixed(prec);
     this.critMult=this.critMult.toFixed(prec);
     this.critRate=this.critRate.toFixed(prec);
-    let endTest = Date.now();
-    console.log(`Time for setPrecision: ${endTest - startTest}`);
   }
   setDmgType(){
-    let startTest = Date.now();
     if (this.rawDmgType < 6) {
       let dmgType = this.physDmgType;
-      let endTest = Date.now();
-      console.log(`Time for setDmgType: ${endTest - startTest}`);
       return dmgType;
     }
     else{
       let dmgType = this.magDmgType;
-      let endTest = Date.now();
-      console.log(`Time for setDmgType: ${endTest - startTest}`);
+      
       return dmgType;
     }
     
   }
   setPhysDmg(){
-    let startTest = Date.now();
     switch (this.wType) {
       case 'Longsword':
       case 'Knife':
@@ -173,11 +166,8 @@ class Weapon {
       default:
         break;
     }
-    let endTest = Date.now();
-    console.log(`Time for setPhysDmg: ${endTest - startTest}`);
   }
   applyRarityMod(){
-    let startTest = Date.now();
     switch (this.rarity) {
       case 'Common':
         this.assemblyDamage *= 0.7;
@@ -223,11 +213,8 @@ class Weapon {
       default:
         break;
     }
-    let endTest = Date.now();
-    console.log(`Time for applyRarityMod: ${endTest - startTest}`);
   }
   applyMainDmgMod(){
-    let startTest = Date.now();
     switch (this.dmgType) {
       case 'Slashing':
         this.mainPhysical = 1*this.assemblyDamage;// Slashing damage modifier
@@ -328,14 +315,9 @@ class Weapon {
       default:
         break;
     }
-    let endTest = Date.now();
-    console.log(`Time for applyMainDmgMod: ${endTest - startTest}`);
   }
   setName(){
-    let startTest = Date.now();
     this.name = `${this.rarity} ${this.wType} of ${this.dmgType}`;
-    let endTest = Date.now();
-    console.log(`Time for setName: ${endTest - startTest}`);
   }
   get giveDebugData(){
     return `${this.name}:${this.assemblyDamage}:${this.physDmgType}:${this.magDmgType}:${this.critRate}:${this.critMult}:${this.rarity}:${this.wType}:${this.dmgType}:${this.mainPhysical}:${this.mainMagical}`;
@@ -354,7 +336,7 @@ function loadInv(invSlots){
 function generateWeapon(n = 1, debug = 0){
   for (let i = 0; i < n; i++) {
     weaponsGenerated.push(new Weapon());
-  }
+    }
   
   if (debug)
   {
@@ -394,10 +376,10 @@ function showInfo(i){
 <div class="show-weapon-info">
   <img src="" alt="Pic of Weapon" class="show-weapon-info-img">
   <p class="show-weapon-info-text">${weaponsGenerated[i].name}</p>
-  <p class="show-weapon-info-text">Weapon Type: ${weaponsGenerated[i].type}</p>
-  <p class="show-weapon-info-text">Main Damage Type: ${weaponsGenerated[i].damageType}</p>
-  <p class="show-weapon-info-text">Physical Damage: ${weaponsGenerated[i].physicalDamageType}</p>
-  <p class="show-weapon-info-text">Magical Damage: ${weaponsGenerated[i].magicalDamageType}</p>
+  <p class="show-weapon-info-text">Weapon Type: ${weaponsGenerated[i].wType}</p>
+  <p class="show-weapon-info-text">Main Damage Type: ${weaponsGenerated[i].dmgType}</p>
+  <p class="show-weapon-info-text">Physical Damage: ${weaponsGenerated[i].mainPhysical}</p>
+  <p class="show-weapon-info-text">Magical Damage: ${weaponsGenerated[i].mainMagical}</p>
   <p class="show-weapon-info-text">DMG Value: ${weaponsGenerated[i].assemblyDamage}</p>
   <p class="show-weapon-info-text">Crit Mult: ${weaponsGenerated[i].critMult}</p>
   <p class="show-weapon-info-text">Crit Rate: ${weaponsGenerated[i].critRate}</p>
@@ -416,7 +398,6 @@ function getRandNum(min=0, max=0, what = 1) {
   return parseInt(Math.random() * (max - min) + min); 
   }
 }
-
 
 function throwError(popUp ,errorCode = 0) {
   if (popUp) {

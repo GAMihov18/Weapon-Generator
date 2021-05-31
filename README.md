@@ -95,6 +95,7 @@ Damage bonuses:
 - -50% damage against Void armor
 - -50% damage against Physical armor
 ### Lux:
+###### Soon to be reworked
 Gets 200% of assembly damage as Lux damage  and heals the user for 20% of damage dealt to magical armor. Lux weapons don't have physical damage.
 
 Damage bonuses:
